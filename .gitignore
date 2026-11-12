@@ -1,0 +1,6 @@
+AGENTS.md
+site/
+venv/
+.venv/
+.DS_Store
+.vscode/

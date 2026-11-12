@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="800" viewBox="0 0 1160 800" role="img" aria-labelledby="title desc">
+<title id="title">LACCP and MIKUMARI responsibilities</title>
+<desc id="desc">Logical protocol layers. LACCP is above the MIKUMARI link. Heartbeat units are external to LaccpMainBlock. Clock recovery is a separate integration component. Sources: LACCP/laccp/LaccpMainBlock.vhd, HeartBeatUnit.vhd, PrimaryHeartBeatUnit.vhd; mikumari/mikumari-link/Wrapper/MikumariBlock.vhd. This is a conceptual diagram, not a complete port map.</desc>
+<defs>
+<marker id="signal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#547084"/></marker>
+<marker id="clock" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#ad5c1c"/></marker>
+<marker id="teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#087f83"/></marker>
+</defs>
+<rect x="0" y="0" width="1160" height="800" rx="0" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="40" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#087f83">FIGURE 1  /  PROTOCOL LAYERS</text>
+<text x="40" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#183044">From link transport to synchronized timestamps</text>
+<text x="40" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Each layer supplies a different part of the time-synchronization system.</text>
+<rect x="40" y="158" width="670" height="110" rx="12" fill="#f1f5f9" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="65" y="193" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#183044">User DAQ logic</text>
+<text x="65" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#516779">Use heartbeatCount and hbfNumber; apply fineOffset</text>
+<text x="65" y="250" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#516779">to the timestamp in the user data path.</text>
+<rect x="40" y="324" width="670" height="146" rx="12" fill="#eaf7f7" stroke="#91c9c9" stroke-width="1.5"/>
+<text x="65" y="361" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#087f83">LACCP</text>
+<text x="65" y="395" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#183044">LaccpMainBlock + external Heartbeat Unit</text>
+<text x="65" y="426" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#516779">Round-trip measurement, counter / frame synchronization,</text>
+<text x="65" y="452" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#516779">and fine-offset calculation.</text>
+<rect x="40" y="526" width="670" height="146" rx="12" fill="#edf5fc" stroke="#9dbed7" stroke-width="1.5"/>
+<text x="65" y="563" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#187caa">MIKUMARI link + CBT</text>
+<text x="65" y="600" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#516779">Normal frames and fixed-latency pulses</text>
+<text x="65" y="629" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#516779">Clock duty-cycle modulation over FPGA I/O</text>
+<polyline points="375,324 375,268" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#teal)"/>
+<rect x="260.47" y="279" width="229.05999999999997" height="30" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="375" y="301" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#087f83">Timestamp information</text>
+<polyline points="375,526 375,470" fill="none" stroke="#187caa" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)" marker-start="url(#signal)"/>
+<rect x="290.05" y="481" width="169.89999999999998" height="30" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="375" y="503" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#187caa">Frames + pulses</text>
+<rect x="755" y="324" width="365" height="146" rx="12" fill="#ffffff" stroke="#91c9c9" stroke-width="1.5"/>
+<text x="777" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#087f83">Time synchronization</text>
+<text x="777" y="394" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Coarse timing + fine correction</text>
+<text x="777" y="421" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Recovered clock phase</text>
+<text x="777" y="448" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">is not aligned by LACCP.</text>
+<rect x="755" y="526" width="365" height="146" rx="12" fill="#ffffff" stroke="#9dbed7" stroke-width="1.5"/>
+<text x="777" y="562" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#187caa">Frequency + communication</text>
+<text x="777" y="596" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">The secondary recovers clocks</text>
+<text x="777" y="623" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">from the forward modulated signal</text>
+<text x="777" y="650" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">using external MMCM / PLL logic.</text>
+<rect x="40" y="712" width="1080" height="53" rx="12" fill="#fff7ed" stroke="#efd5b4" stroke-width="1.5"/>
+<text x="61" y="745" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#ad5c1c">Clock generation / recovery, board I/O and constraints must be supplied by the integrating design.</text>
+</svg>

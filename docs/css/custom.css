@@ -1,0 +1,55 @@
+.myred {
+  color: red;
+}
+
+.vmgr-table {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.mgr-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mgr-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mgr-30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+table th {
+  text-align: center;
+  border: none;
+  border-top: 1px #a5a5a5 solid;
+  border-bottom: 1px #a5a5a5 solid;
+  background-color: #c7c7c7;
+}
+
+table tr{
+  border: none;
+  border-top: 1px #a5a5a5 solid;
+  border-bottom: 1px #a5a5a5 solid;
+}
+
+dt {
+  font-weight: bold;
+  border-left: 3px solid #d85e5e;
+}
+
+dd {
+  margin-left: 20px;
+  padding-bottom: 0px;
+}

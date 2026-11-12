@@ -1,0 +1,42 @@
+site_name: LACCP User Guide
+site_description: LACCP User Guide
+site_author: "R.Honda"
+repo_url: https://github.com/spadi-alliance/ug-laccp
+repo_name: ug-laccp
+
+theme:
+  name: material
+  features:
+    - toc.integrate
+    - navigation.tabs
+  palette:
+    #    scheme: slate
+    scheme: default
+    primary: red
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - markdown_katex:
+      no_inline_svg: true
+      insert_fonts_css: true
+  #  - hbfm.inline_coloring
+  #  - hbfm.inline_list
+  #  - toc:
+  #      slugify: !!python/name:hbfm.toc.slugify
+  #- hbfm.number_headers
+  #- hbfm.quote_uri_hash
+  - image_captions:
+      numbering: true
+  - caption:
+      numbering: true
+
+extra_css:
+  - css/custom.css
+
+nav:
+  - Top: index.md
+  - Release: release/release.md
+  - Get-Started: get-started/get-started.md
+  - LACCP: laccp/laccp.md
+  - Usage: usage/usage.md

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1310" viewBox="0 0 1200 1310" role="img" aria-labelledby="title desc">
+<title id="title">LACCP synchronization startup</title>
+<desc id="desc">High-level dependency flow for a primary-secondary link, not a cycle-accurate timing diagram or an exact RTL state-machine diagram. MIKUMARI must establish linkUp. Secondary RCAP prepares valid offsets; HeartBeatUnit synchronizes its counter and frame number, then returns isSynchronized to RCAP. The completion exchange sets isReadyForDaq. LaccpMainBlock is reset while rst is high or mikuLinkUpIn is low, through its reset synchronizer. Sources: LACCP/laccp/LaccpMainBlock.vhd, RCAP.vhd and HeartBeatUnit.vhd.</desc>
+<defs>
+<marker id="signal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#547084"/></marker>
+<marker id="clock" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#ad5c1c"/></marker>
+<marker id="teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#087f83"/></marker>
+</defs>
+<rect x="0" y="0" width="1200" height="1310" rx="0" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="40" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#087f83">FIGURE 3  /  STARTUP FLOW</text>
+<text x="40" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#183044">From link establishment to acquisition readiness</text>
+<text x="40" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">High-level dependencies; offset exchanges and pulse measurements may overlap.</text>
+<text x="85" y="167" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#516779">Processing stage</text>
+<text x="790" y="167" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#516779">Observe / connect</text>
+<rect x="70" y="190" width="655" height="118" rx="12" fill="#f3f7fa" stroke="#ccd9e1" stroke-width="1.5"/>
+<rect x="87" y="209" width="35" height="35" rx="9" fill="#087f83" stroke="none" stroke-width="1.5"/>
+<text x="104.5" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+<text x="138" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#183044">Provide clocks and release system resets</text>
+<text x="94" y="266" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Primary reference clock and secondary clock recovery</text>
+<text x="94" y="292" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">must operate according to the board design.</text>
+<text x="790" y="241" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Board clock / reset checks</text>
+<polyline points="398,308 398,350" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)"/>
+<rect x="70" y="350" width="655" height="118" rx="12" fill="#f3f7fa" stroke="#ccd9e1" stroke-width="1.5"/>
+<rect x="87" y="369" width="35" height="35" rx="9" fill="#087f83" stroke="none" stroke-width="1.5"/>
+<text x="104.5" y="394" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
+<text x="138" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#183044">Establish the MIKUMARI link</text>
+<text x="94" y="426" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Connect MikumariBlock.linkUp to</text>
+<text x="94" y="452" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">LaccpMainBlock.mikuLinkUpIn.</text>
+<text x="790" y="401" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="start" fill="#516779">mikuLinkUpIn = 1</text>
+<polyline points="398,468 398,510" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)"/>
+<rect x="70" y="510" width="655" height="118" rx="12" fill="#f3f7fa" stroke="#ccd9e1" stroke-width="1.5"/>
+<rect x="87" y="529" width="35" height="35" rx="9" fill="#087f83" stroke="none" stroke-width="1.5"/>
+<text x="104.5" y="554" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ffffff">3</text>
+<text x="138" y="552" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#183044">Prepare the secondary offsets</text>
+<text x="94" y="586" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">RCAP measures round-trip time and uses exchanged</text>
+<text x="94" y="612" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">receiver delay information to calculate offsets.</text>
+<text x="790" y="561" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="start" fill="#087f83">validOffset = 1</text>
+<text x="790" y="590" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="start" fill="#087f83">hbcOffset and fineOffset valid</text>
+<polyline points="398,628 398,670" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)"/>
+<rect x="70" y="670" width="655" height="118" rx="12" fill="#f3f7fa" stroke="#ccd9e1" stroke-width="1.5"/>
+<rect x="87" y="689" width="35" height="35" rx="9" fill="#087f83" stroke="none" stroke-width="1.5"/>
+<text x="104.5" y="714" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ffffff">4</text>
+<text x="138" y="712" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#183044">Synchronize the secondary Heartbeat Unit</text>
+<text x="94" y="746" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Use syncPulseIn with validOffsetIn to align the counter;</text>
+<text x="94" y="772" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">then accept valid global heartbeat-frame information.</text>
+<text x="790" y="721" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="start" fill="#087f83">HBU.isSynchronized = 1</text>
+<text x="790" y="750" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="start" fill="#087f83">&#8594; LaccpMainBlock.hbuIsSyncedIn</text>
+<polyline points="398,788 398,830" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)"/>
+<rect x="70" y="830" width="655" height="118" rx="12" fill="#f3f7fa" stroke="#ccd9e1" stroke-width="1.5"/>
+<rect x="87" y="849" width="35" height="35" rx="9" fill="#087f83" stroke="none" stroke-width="1.5"/>
+<text x="104.5" y="874" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ffffff">5</text>
+<text x="138" y="872" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#183044">Complete the RCAP exchange</text>
+<text x="94" y="906" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">The secondary sends its completion message;</text>
+<text x="94" y="932" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">the primary replies.</text>
+<text x="790" y="881" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Primary and secondary RCAP</text>
+<text x="790" y="910" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">finish their completion handling.</text>
+<polyline points="398,948 398,990" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)"/>
+<rect x="70" y="990" width="655" height="118" rx="12" fill="#eaf7f7" stroke="#91c9c9" stroke-width="1.5"/>
+<rect x="87" y="1009" width="35" height="35" rx="9" fill="#087f83" stroke="none" stroke-width="1.5"/>
+<text x="104.5" y="1034" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ffffff">6</text>
+<text x="138" y="1032" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#183044">Confirm acquisition readiness</text>
+<text x="94" y="1066" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Check the completion status at each endpoint.</text>
+<text x="94" y="1092" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Use the fine offset in the user timestamp path.</text>
+<text x="790" y="1041" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="start" fill="#087f83">isReadyForDaq = 1</text>
+<text x="790" y="1070" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="start" fill="#087f83">at both endpoints</text>
+<rect x="40" y="1155" width="1120" height="111" rx="12" fill="#fff7ed" stroke="#efd5b4" stroke-width="1.5"/>
+<text x="62" y="1189" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#ad5c1c">Link loss restarts LaccpMainBlock</text>
+<text x="62" y="1220" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#ad5c1c">Its reset synchronizer samples rst OR NOT mikuLinkUpIn.</text>
+<text x="62" y="1247" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#ad5c1c">Link-up, valid offsets, HBU synchronization and RCAP completion are distinct conditions.</text>
+</svg>
