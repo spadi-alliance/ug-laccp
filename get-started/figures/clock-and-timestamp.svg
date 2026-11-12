@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1320" viewBox="0 0 1320 1320" role="img" aria-labelledby="title desc">
+<title id="title">Clock, heartbeat, and timestamp relationships in LACCP</title>
+<desc id="desc">Conceptual timing after coarse synchronization. The primary and secondary clocks have the same frequency but retain a phase offset. In this example the secondary heartbeat is earlier, so its signed fine offset is negative. The acquisition logic applies the correction to timestamps. The lower diagram shows the MIKUMARI link, LACCP, external Heartbeat Units, and DAQ logic. Inspired by slide 9 of R. Honda, MIKUMARI, the time synchronization protocol in the SPADI Alliance, SRO XIV. Checked against LACCP/laccp/RCAP.vhd, HeartBeatUnit.vhd, PrimaryHeartBeatUnit.vhd, and LaccpMainBlock.vhd. Clock and pulse widths are schematic; internal pipelines and user port wiring are omitted.</desc>
+<defs>
+<marker id="line" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 L9 5 L0 10 Z" fill="#547084"/></marker>
+<marker id="primary" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 L9 5 L0 10 Z" fill="#187caa"/></marker>
+<marker id="secondary" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 L9 5 L0 10 Z" fill="#087f83"/></marker>
+<marker id="fine" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 L9 5 L0 10 Z" fill="#ad5c1c"/></marker>
+</defs>
+<rect x="0" y="0" width="1320" height="1320" rx="0" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="40" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#183044">Synchronized timestamps, shifted clocks</text>
+<text x="40" y="80" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#516779">MIKUMARI synchronizes frequency; LACCP supplies the remaining time correction.</text>
+<rect x="40" y="105" width="1240" height="570" rx="12" fill="#f8fafc" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="65" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#187caa">Primary node</text>
+<text x="65" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#183044">Reference clock</text>
+<text x="65" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#183044">Heartbeat</text>
+<text x="65" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#183044">Heartbeat counter</text>
+<polyline points="350,205 390,205 390,175 455,175 455,205 520,205 520,175 585,175 585,205 650,205 650,175 715,175 715,205 780,205 780,175 845,175 845,205 910,205 910,175 975,175 975,205 1040,205 1040,175 1105,175 1105,205 1170,205 1170,175 1230,175" fill="none" stroke="#187caa" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="350,265 780,265 780,235 910,235 910,265 1230,265" fill="none" stroke="#187caa" stroke-width="3" stroke-linejoin="round"/>
+<rect x="520" y="300" width="130" height="42" rx="0" fill="#ffffff" stroke="#187caa" stroke-width="1.5"/>
+<text x="585" y="328" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#187caa">0xFFFE</text>
+<rect x="650" y="300" width="130" height="42" rx="0" fill="#ffffff" stroke="#187caa" stroke-width="1.5"/>
+<text x="715" y="328" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#187caa">0xFFFF</text>
+<rect x="780" y="300" width="130" height="42" rx="0" fill="#fff2df" stroke="#187caa" stroke-width="1.5"/>
+<text x="845" y="328" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#187caa">0x0000</text>
+<rect x="910" y="300" width="130" height="42" rx="0" fill="#ffffff" stroke="#187caa" stroke-width="1.5"/>
+<text x="975" y="328" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#187caa">0x0001</text>
+<rect x="1040" y="300" width="130" height="42" rx="0" fill="#ffffff" stroke="#187caa" stroke-width="1.5"/>
+<text x="1105" y="328" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#187caa">0x0002</text>
+<text x="65" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#087f83">Secondary node</text>
+<text x="65" y="492" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#183044">Recovered clock</text>
+<text x="65" y="552" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#183044">Heartbeat</text>
+<text x="65" y="616" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#183044">Heartbeat counter</text>
+<polyline points="350,465 415,465 415,495 480,495 480,465 545,465 545,495 610,495 610,465 675,465 675,495 740,495 740,465 805,465 805,495 870,495 870,465 935,465 935,495 1000,495 1000,465 1065,465 1065,495 1130,495 1130,465 1195,465 1195,495 1230,495" fill="none" stroke="#087f83" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="350,555 740,555 740,525 870,525 870,555 1230,555" fill="none" stroke="#087f83" stroke-width="3" stroke-linejoin="round"/>
+<rect x="480" y="590" width="130" height="42" rx="0" fill="#ffffff" stroke="#087f83" stroke-width="1.5"/>
+<text x="545" y="618" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#087f83">0xFFFE</text>
+<rect x="610" y="590" width="130" height="42" rx="0" fill="#ffffff" stroke="#087f83" stroke-width="1.5"/>
+<text x="675" y="618" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#087f83">0xFFFF</text>
+<rect x="740" y="590" width="130" height="42" rx="0" fill="#fff2df" stroke="#087f83" stroke-width="1.5"/>
+<text x="805" y="618" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#087f83">0x0000</text>
+<rect x="870" y="590" width="130" height="42" rx="0" fill="#ffffff" stroke="#087f83" stroke-width="1.5"/>
+<text x="935" y="618" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#087f83">0x0001</text>
+<rect x="1000" y="590" width="130" height="42" rx="0" fill="#ffffff" stroke="#087f83" stroke-width="1.5"/>
+<text x="1065" y="618" font-family="Consolas, monospace" font-size="20" font-weight="400" text-anchor="middle" fill="#087f83">0x0002</text>
+<polyline points="780,233 780,290" fill="none" stroke="#ad5c1c" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="780,350 780,575" fill="none" stroke="#ad5c1c" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="740,233 740,290" fill="none" stroke="#ad5c1c" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="740,350 740,575" fill="none" stroke="#ad5c1c" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="740,390 780,390" fill="none" stroke="#ad5c1c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#fine)" marker-start="url(#fine)"/>
+<text x="830" y="385" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#ad5c1c">Local fine offset &lt; 0</text>
+<text x="830" y="416" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#ad5c1c">The secondary heartbeat is earlier.</text>
+<polyline points="520,168 650,168" fill="none" stroke="#187caa" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#primary)" marker-start="url(#primary)"/>
+<rect x="571.155" y="142" width="27.689999999999998" height="29" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="585" y="163" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#187caa">T</text>
+<polyline points="480,458 610,458" fill="none" stroke="#087f83" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#secondary)" marker-start="url(#secondary)"/>
+<rect x="531.155" y="432" width="27.689999999999998" height="29" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="545" y="453" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#087f83">T</text>
+<text x="65" y="658" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Conceptual timing after coarse synchronization; not to scale. Internal pipelines are omitted.</text>
+<text x="40" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#183044">From the link to acquisition data</text>
+<rect x="40" y="735" width="1240" height="495" rx="12" fill="#f8fafc" stroke="#ccd9e1" stroke-width="1.5"/>
+<text x="350" y="772" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#187caa">Primary node</text>
+<text x="350" y="1022" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#087f83">Secondary node</text>
+<rect x="80" y="795" width="180" height="82" rx="12" fill="#edf5fc" stroke="#187caa" stroke-width="1.5"/>
+<text x="170.0" y="831" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#187caa">MIKUMARI</text>
+<text x="170.0" y="859" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#516779">Clock + transport</text>
+<rect x="350" y="795" width="180" height="82" rx="12" fill="#eaf7f7" stroke="#187caa" stroke-width="1.5"/>
+<text x="440.0" y="831" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#187caa">LACCP</text>
+<text x="440.0" y="859" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#516779">Time synchronization</text>
+<rect x="620" y="795" width="230" height="82" rx="12" fill="#ffffff" stroke="#187caa" stroke-width="1.5"/>
+<text x="735.0" y="831" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#187caa">Heartbeat Unit</text>
+<text x="735.0" y="859" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#516779">Counter + frame number</text>
+<rect x="980" y="795" width="240" height="82" rx="12" fill="#ffffff" stroke="#187caa" stroke-width="1.5"/>
+<text x="1100.0" y="831" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#187caa">DAQ logic</text>
+<text x="1100.0" y="859" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#516779">Reference timestamps</text>
+<polyline points="260,836 350,836" fill="none" stroke="#187caa" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#primary)" marker-start="url(#primary)"/>
+<polyline points="850,836 980,836" fill="none" stroke="#187caa" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#primary)"/>
+<rect x="833.04" y="801" width="163.92" height="28" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="915" y="821" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#187caa">Time information</text>
+<rect x="80" y="1045" width="180" height="82" rx="12" fill="#edf5fc" stroke="#087f83" stroke-width="1.5"/>
+<text x="170.0" y="1081" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#087f83">MIKUMARI</text>
+<text x="170.0" y="1109" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#516779">Clock + transport</text>
+<rect x="350" y="1045" width="180" height="82" rx="12" fill="#eaf7f7" stroke="#087f83" stroke-width="1.5"/>
+<text x="440.0" y="1081" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#087f83">LACCP</text>
+<text x="440.0" y="1109" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#516779">Time synchronization</text>
+<rect x="620" y="1045" width="230" height="82" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="1.5"/>
+<text x="735.0" y="1081" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#087f83">Heartbeat Unit</text>
+<text x="735.0" y="1109" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#516779">Counter + frame number</text>
+<rect x="980" y="1045" width="240" height="82" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="1.5"/>
+<text x="1100.0" y="1081" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#087f83">DAQ logic</text>
+<text x="1100.0" y="1109" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#516779">Corrected timestamps</text>
+<polyline points="260,1086 350,1086" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#secondary)" marker-start="url(#secondary)"/>
+<polyline points="850,1086 980,1086" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#secondary)"/>
+<rect x="833.04" y="1051" width="163.92" height="28" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="915" y="1071" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#087f83">Time information</text>
+<polyline points="620,836 530,836" fill="none" stroke="#187caa" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#primary)"/>
+<rect x="524.96" y="800" width="100.08" height="28" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="575" y="820" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#187caa">Heartbeat</text>
+<polyline points="530,1086 620,1086" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#secondary)"/>
+<rect x="547.76" y="1050" width="54.48" height="28" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="575" y="1070" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#087f83">Sync</text>
+<polyline points="135,877 135,1045" fill="none" stroke="#187caa" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#primary)"/>
+<polyline points="205,1045 205,877" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#secondary)"/>
+<text x="255" y="947" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#183044">Bidirectional MIKUMARI link</text>
+<text x="255" y="978" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">The primary supplies the clock frequency reference.</text>
+<polyline points="440,1127 440,1180 1040,1180 1040,1127" fill="none" stroke="#ad5c1c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#fine)"/>
+<rect x="523.0" y="1148" width="473.99999999999994" height="32" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="760" y="1172" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#ad5c1c">Signed fine offset applied to timestamps</text>
+<text x="65" y="1211" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">The clocks retain their phase difference; the acquisition logic corrects the timestamp.</text>
+<text x="40" y="1274" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">The DAQ data format and insertion of frame-number information belong to the application.</text>
+<text x="1230" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="19" text-anchor="end" fill="#516779">Time &#8594;</text>
+</svg>

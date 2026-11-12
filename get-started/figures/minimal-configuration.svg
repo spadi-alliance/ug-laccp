@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1260" viewBox="0 0 1440 1260" role="img" aria-labelledby="title desc">
+<title id="title">Minimal primary-secondary LACCP configuration</title>
+<desc id="desc">A conceptual two-FPGA configuration. Each FPGA contains an external Heartbeat Unit, LaccpMainBlock and MikumariBlock. Only selected interfaces are shown. The physical connection is bidirectional. Key synchronization connections are specified below the diagram. Sources: LACCP/laccp/LaccpMainBlock.vhd, PrimaryHeartBeatUnit.vhd, HeartBeatUnit.vhd, defLaccp.vhd; mikumari/mikumari-link/Wrapper/MikumariBlock.vhd.</desc>
+<defs>
+<marker id="signal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#547084"/></marker>
+<marker id="clock" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#ad5c1c"/></marker>
+<marker id="teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 5 L 0 10 Z" fill="#087f83"/></marker>
+</defs>
+<rect x="0" y="0" width="1440" height="1260" rx="0" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="40" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#087f83">FIGURE 2  /  MINIMAL CONFIGURATION</text>
+<text x="40" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#183044">One primary, one secondary</text>
+<text x="40" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Selected interfaces only; arrows show signal direction, not clock-cycle timing.</text>
+<rect x="40" y="148" width="640" height="655" rx="16" fill="#f8fafc" stroke="#cdd9e2" stroke-width="1.5"/>
+<text x="64" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#183044">Primary FPGA</text>
+<text x="64" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Reference clock source</text>
+<rect x="70" y="235" width="580" height="87" rx="12" fill="#f1f5f9" stroke="#aebfcd" stroke-width="1.5"/>
+<text x="360" y="269" font-family="Consolas, monospace" font-size="24" font-weight="700" text-anchor="middle" fill="#183044">PrimaryHeartBeatUnit</text>
+<text x="360" y="300" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="middle" fill="#516779">heartbeatCount  /  hbfNumber</text>
+<rect x="70" y="442" width="580" height="91" rx="12" fill="#eaf7f7" stroke="#91c9c9" stroke-width="1.5"/>
+<text x="360" y="477" font-family="Consolas, monospace" font-size="25" font-weight="700" text-anchor="middle" fill="#087f83">LaccpMainBlock</text>
+<text x="360" y="509" font-family="Consolas, monospace" font-size="19" font-weight="400" text-anchor="middle" fill="#087f83">kPrimaryMode = true</text>
+<rect x="70" y="683" width="580" height="87" rx="12" fill="#edf5fc" stroke="#9dbed7" stroke-width="1.5"/>
+<text x="360" y="718" font-family="Consolas, monospace" font-size="24" font-weight="700" text-anchor="middle" fill="#187caa">MikumariBlock</text>
+<text x="360" y="749" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#516779">MIKUMARI link + CBT</text>
+<polyline points="230,533 230,683" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)" marker-start="url(#signal)"/>
+<rect x="145.05" y="569" width="169.89999999999998" height="30" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="230" y="591" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#516779">Frames + pulses</text>
+<polyline points="500,683 500,533" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)"/>
+<rect x="410.12" y="599" width="179.76" height="30" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="500" y="621" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#516779">Link + RX timing</text>
+<rect x="760" y="148" width="640" height="655" rx="16" fill="#f8fafc" stroke="#cdd9e2" stroke-width="1.5"/>
+<text x="784" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#183044">Secondary FPGA</text>
+<text x="784" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Recovered clock source</text>
+<rect x="790" y="235" width="580" height="87" rx="12" fill="#f1f5f9" stroke="#aebfcd" stroke-width="1.5"/>
+<text x="1080" y="269" font-family="Consolas, monospace" font-size="24" font-weight="700" text-anchor="middle" fill="#183044">HeartBeatUnit</text>
+<text x="1080" y="300" font-family="Consolas, monospace" font-size="18" font-weight="400" text-anchor="middle" fill="#516779">heartbeatCount  /  hbfNumber</text>
+<rect x="790" y="442" width="580" height="91" rx="12" fill="#eaf7f7" stroke="#91c9c9" stroke-width="1.5"/>
+<text x="1080" y="477" font-family="Consolas, monospace" font-size="25" font-weight="700" text-anchor="middle" fill="#087f83">LaccpMainBlock</text>
+<text x="1080" y="509" font-family="Consolas, monospace" font-size="19" font-weight="400" text-anchor="middle" fill="#087f83">kPrimaryMode = false</text>
+<rect x="790" y="683" width="580" height="87" rx="12" fill="#edf5fc" stroke="#9dbed7" stroke-width="1.5"/>
+<text x="1080" y="718" font-family="Consolas, monospace" font-size="24" font-weight="700" text-anchor="middle" fill="#187caa">MikumariBlock</text>
+<text x="1080" y="749" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#516779">MIKUMARI link + CBT</text>
+<polyline points="950,533 950,683" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)" marker-start="url(#signal)"/>
+<rect x="865.05" y="569" width="169.89999999999998" height="30" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="950" y="591" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#516779">Frames + pulses</text>
+<polyline points="1220,683 1220,533" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)"/>
+<rect x="1130.12" y="599" width="179.76" height="30" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="1220" y="621" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#516779">Link + RX timing</text>
+<polyline points="210,322 210,442" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#teal)"/>
+<rect x="152.02" y="358" width="115.96" height="31" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="210" y="381" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#087f83">Heartbeat</text>
+<polyline points="535,322 535,442" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)" marker-start="url(#signal)"/>
+<rect x="487.46" y="358" width="95.08" height="31" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="535" y="381" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#516779">HBU bus</text>
+<polyline points="880,442 880,322" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#teal)"/>
+<rect x="804.04" y="344" width="151.92" height="29" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="880" y="365" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#087f83">Sync + offsets</text>
+<polyline points="1080,322 1080,442" fill="none" stroke="#087f83" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#teal)"/>
+<rect x="1017.96" y="378" width="124.08" height="29" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="1080" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#087f83">Sync status</text>
+<polyline points="1280,322 1280,442" fill="none" stroke="#547084" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#signal)" marker-start="url(#signal)"/>
+<rect x="1236.52" y="344" width="86.96" height="29" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="1280" y="365" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#516779">HBU bus</text>
+<polyline points="650,709 790,709" fill="none" stroke="#ad5c1c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#clock)"/>
+<polyline points="790,751 650,751" fill="none" stroke="#ad5c1c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#clock)"/>
+<text x="635" y="705" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="end" fill="#ad5c1c">TX</text>
+<text x="805" y="705" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#ad5c1c">RX</text>
+<text x="635" y="747" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="end" fill="#ad5c1c">RX</text>
+<text x="805" y="747" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#ad5c1c">TX</text>
+<rect x="657.96" y="639" width="124.08" height="29" rx="4" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<text x="720" y="660" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#ad5c1c">Duplex link</text>
+<text x="40" y="847" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#183044">Key synchronization connections</text>
+<rect x="40" y="866" width="1360" height="48" rx="0" fill="#f4f8fa" stroke="#dbe4eb" stroke-width="1.5"/>
+<text x="56" y="896" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#183044">Primary heartbeat</text>
+<text x="275" y="896" font-family="Consolas, monospace" font-size="17" font-weight="400" text-anchor="start" fill="#183044">PrimaryHeartBeatUnit.heartbeatOut &#8594; LaccpMainBlock.syncPulseIn</text>
+<rect x="40" y="914" width="1360" height="48" rx="0" fill="#ffffff" stroke="#dbe4eb" stroke-width="1.5"/>
+<text x="56" y="944" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#183044">Secondary sync</text>
+<text x="275" y="944" font-family="Consolas, monospace" font-size="17" font-weight="400" text-anchor="start" fill="#183044">LaccpMainBlock.syncPulseOut &#8594; HeartBeatUnit.syncPulseIn</text>
+<rect x="40" y="962" width="1360" height="48" rx="0" fill="#f4f8fa" stroke="#dbe4eb" stroke-width="1.5"/>
+<text x="56" y="992" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#183044">Secondary offsets</text>
+<text x="275" y="992" font-family="Consolas, monospace" font-size="17" font-weight="400" text-anchor="start" fill="#183044">LaccpMainBlock.hbcOffset / validOffset &#8594; HeartBeatUnit.hbcOffsetIn / validOffsetIn</text>
+<rect x="40" y="1010" width="1360" height="48" rx="0" fill="#ffffff" stroke="#dbe4eb" stroke-width="1.5"/>
+<text x="56" y="1040" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#183044">Secondary feedback</text>
+<text x="275" y="1040" font-family="Consolas, monospace" font-size="17" font-weight="400" text-anchor="start" fill="#183044">HeartBeatUnit.isSynchronized &#8594; LaccpMainBlock.hbuIsSyncedIn</text>
+<rect x="40" y="1058" width="1360" height="48" rx="0" fill="#f4f8fa" stroke="#dbe4eb" stroke-width="1.5"/>
+<text x="56" y="1088" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#183044">HBU bus</text>
+<text x="275" y="1088" font-family="Consolas, monospace" font-size="17" font-weight="400" text-anchor="start" fill="#183044">External intra port 0 &#8596; Heartbeat Unit LACCP Bus (data / valid / ready)</text>
+<text x="40" y="1140" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Clock domains: each node&#x27;s LaccpMainBlock.clk and HBU.clk use its local MIKUMARI clkPar domain.</text>
+<text x="40" y="1170" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">Clock generation / recovery, resets, calibration inputs, user I/O and unused ports are omitted.</text>
+<text x="40" y="1200" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#516779">The secondary user data path also consumes LaccpMainBlock.fineOffset.</text>
+</svg>

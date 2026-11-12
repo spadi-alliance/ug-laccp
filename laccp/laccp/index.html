@@ -1,0 +1,1724 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LACCP User Guide">
+      
+      
+        <meta name="author" content="R.Honda">
+      
+      
+      
+        <link rel="prev" href="../../get-started/get-started/">
+      
+      
+        <link rel="next" href="../../usage/usage/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>LACCP - LACCP User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#laccp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LACCP User Guide" class="md-header__button md-logo" aria-label="LACCP User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LACCP User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LACCP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/spadi-alliance/ug-laccp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ug-laccp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Top
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../release/release/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Release
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../get-started/get-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get-Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  LACCP
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../usage/usage/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Usage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LACCP User Guide" class="md-nav__button md-logo" aria-label="LACCP User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LACCP User Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/spadi-alliance/ug-laccp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ug-laccp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get-Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LACCP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LACCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laccp-frames-and-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LACCP frames and bus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LACCP frames and bus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frame-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frame format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bus-ports-and-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bus ports and forwarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCAP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RCAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-units-and-offsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time units and offsets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receiver-parameters-and-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver parameters and calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rcap-local-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCAP local addresses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rligp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RLIGP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heartbeat-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heartbeat Units
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laccpmainblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LaccpMainBlock
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LaccpMainBlock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-user-pulses-and-rligp-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System, user pulses, and RLIGP ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timing-and-synchronization-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timing and synchronization ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laccp-bus-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LACCP Bus ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mikumari-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIKUMARI ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heartbeat-unit-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heartbeat Unit interfaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational behavior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operational behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reset-and-link-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset and link loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-pulses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User pulses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source map
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="laccp">LACCP</h1>
+<p>This page describes the architecture, behavior, and public interfaces of the current <a href="https://github.com/RyotaroHonda/laccp">LACCP RTL</a>. Signal names follow the source, including spellings such as <code>serdesLantencyIn</code>. For wiring and initialization, see <a href="../../usage/usage/">Usage</a>.</p>
+<h2 id="architecture">Architecture</h2>
+<figure id="_figure-1">
+<img alt="LACCP endpoint architecture" src="../figures/architecture.svg" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<p><code>LaccpMainBlock</code> implements the LACCP endpoint attached to one MIKUMARI link. It contains the following blocks.</p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LaccpFrameRx</code></td>
+<td>Parse the nine-byte LACCP frame received through MIKUMARI.</td>
+</tr>
+<tr>
+<td><code>LaccpFrameTx</code></td>
+<td>Serialize a LACCP frame body into a MIKUMARI normal frame.</td>
+</tr>
+<tr>
+<td><code>LaccpBusSwitch</code></td>
+<td>Distribute frame bodies among the MIKUMARI port, local protocol blocks, and interconnect ports.</td>
+</tr>
+<tr>
+<td><code>RCAP</code></td>
+<td>Measure round-trip time, exchange timing parameters, and calculate synchronization offsets.</td>
+</tr>
+<tr>
+<td><code>RLIGP</code></td>
+<td>Exchange application-supplied link information with the other endpoint.</td>
+</tr>
+</tbody>
+</table>
+<p>The Heartbeat Unit and MIKUMARI blocks are external to <code>LaccpMainBlock</code>. <code>PrimaryHeartBeatUnit</code> generates the root heartbeat and frame information. <code>HeartBeatUnit</code> receives this information and synchronizes a secondary, or operates independently in stand-alone mode.</p>
+<p>The frame path is <code>MIKUMARI &lt;-&gt; FrameRx/FrameTx &lt;-&gt; BusSwitch &lt;-&gt; protocol blocks</code>. The pulse path connects directly to the synchronization and user-pulse logic; pulses are not encoded as LACCP frame bodies. The diagram groups the HBU synchronization interfaces with RCAP; their public ports are on <code>LaccpMainBlock</code>, which routes the heartbeat pulses.</p>
+<h2 id="laccp-frames-and-bus">LACCP frames and bus</h2>
+<h3 id="frame-format">Frame format</h3>
+<p><code>defLaccp.vhd</code> defines a nine-byte frame. <code>LaccpFrameTx</code> sends the preamble first, followed by the frame body from its most significant byte to its least significant byte.</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Field</th>
+<th>Frame-body bits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Preamble, <code>0xFA</code></td>
+<td>Not included in the bus frame body.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Destination module address and local address</td>
+<td>63:60 and 59:56</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Source module address and local address</td>
+<td>55:52 and 51:48</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Command bits</td>
+<td>47:40</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Reserved</td>
+<td>39:32</td>
+</tr>
+<tr>
+<td>5–8</td>
+<td>Register value, most significant byte first</td>
+<td>31:0</td>
+</tr>
+</tbody>
+</table>
+<p><code>LaccpFrameBobyType</code> is the 64-bit frame-body type. The module address selects a protocol endpoint, such as RCAP; the local address selects an operation within that endpoint. These fields are separate from the 32-bit link information exchanged by RLIGP.</p>
+<table>
+<thead>
+<tr>
+<th>Command bit</th>
+<th>RTL constant</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>kCmdPassagePermission</code></td>
+<td>Permit forwarding to interconnect ports.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>kCmdDepature</code></td>
+<td>Permit transmission through the local MIKUMARI port.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>kCmdWrite</code></td>
+<td>Write operation.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>kCmdRead</code></td>
+<td>Read-operation bit defined in the package.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>kCmdReply</code></td>
+<td>Reply operation.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>kCmdReplyRequest</code></td>
+<td>Request a reply.</td>
+</tr>
+</tbody>
+</table>
+<p>The presence of a command constant does not imply that every endpoint implements that operation. The supplied RCAP, RLIGP, and Heartbeat Unit receive logic handles its specific write and reply operations.</p>
+<p>The receiver checks the preamble, expected body length, final-byte indication, and checksum status at the expected final byte before releasing a frame body. <code>frameBrokenRx</code> and <code>recvTermndRx</code> are inputs to the receiver, but the current parser does not use them to change its receive state.</p>
+<h3 id="bus-ports-and-forwarding">Bus ports and forwarding</h3>
+<table>
+<thead>
+<tr>
+<th>Internal port</th>
+<th>Destination module address</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Not a local protocol address</td>
+<td>MIKUMARI frame transport</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>0x1</code></td>
+<td>RLIGP</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>0x2</code></td>
+<td>RCAP</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>0x3</code></td>
+<td>External Heartbeat Unit</td>
+</tr>
+<tr>
+<td>4 onward</td>
+<td>Selected by forwarding rules</td>
+<td>Interconnects</td>
+</tr>
+</tbody>
+</table>
+<p>Destination module address <code>0x0</code> broadcasts to the local protocol ports. A frame is not returned to its originating local port for an ordinary addressed transfer. Passage permission forwards frames to the configured interconnects only when the ingress is not itself an interconnect. Departure permits transmission through MIKUMARI only when the ingress is not MIKUMARI. Interconnect forwarding is a fan-out operation, not an address-to-link routing table.</p>
+<p>The current package exposes one external intra port, at array index 0, for the Heartbeat Unit. The external interconnect arrays have 32 elements; <code>kNumInterconnect</code> selects the implemented prefix. With no interconnects, use <code>kNumInterconnect = 0</code>. Do not consume output elements outside the configured prefix: the main block does not drive them.</p>
+<p>Bus data is a complete 64-bit frame body. Assert the associated input-valid signal for one clock to enqueue one body. Receiver readiness gates the output-valid pulse during forwarding; it is not a per-frame acknowledgment or a mechanism that holds a transfer until the destination becomes ready. The switch and protocol FIFOs have finite capacity and do not expose upstream flow control through these ports. Keep custom traffic within the receiver's processing capacity.</p>
+<h2 id="rcap">RCAP</h2>
+<p>RCAP stands for Remote Clock Adjustment Protocol. It has different responsibilities at the two endpoints.</p>
+<table>
+<thead>
+<tr>
+<th>Primary</th>
+<th>Secondary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Return a received probe pulse.</td>
+<td>Send a probe and measure its round-trip time in system-clock counts.</td>
+</tr>
+<tr>
+<td>Send local receiver parameters, calibration data, and <code>upstreamOffset</code>.</td>
+<td>Use local and received parameters to calculate the fine offset.</td>
+</tr>
+<tr>
+<td>Supply heartbeat pulses during synchronization.</td>
+<td>Apply the calculated counter offset through the external Heartbeat Unit.</td>
+</tr>
+<tr>
+<td>Receive the secondary's completion message and reply.</td>
+<td>Wait for Heartbeat Unit synchronization, send the completion message, and wait for its reply.</td>
+</tr>
+</tbody>
+</table>
+<p>The secondary starts from half the measured round-trip count. If that count is odd, the fine correction includes half a system-clock period. RCAP combines this with the receiver-delay difference, optional calibration correction, and upstream fine offset. It adjusts the coarse counter offset when normalizing the accumulated fine offset across a system-clock boundary.</p>
+<p>The secondary control states are <code>Init</code>, <code>AdjustClock</code>, <code>Finalize</code>, and <code>Done</code>. <code>AdjustClock</code> waits for <code>hbuIsSyncedIn</code>; <code>Finalize</code> waits for the completion reply. <code>isReadyForDaq</code> is directly connected to RCAP's completion output. The primary reports completion after receiving the secondary's completion message, so the endpoints need not assert readiness on the same clock.</p>
+<h3 id="time-units-and-offsets">Time units and offsets</h3>
+<p>The arithmetic represents <strong>1 ns as 1024 counts</strong>. One fine-offset count is therefore <code>1/1024 ns</code>, approximately 0.9765625 ps. This numerical unit is not a claim about synchronization accuracy.</p>
+<p><code>GetFastClockPeriod(kFastClkFreq)</code> returns the half-period of the fast clock in these units, rounded to an integer. The current RCAP arithmetic uses eight such half-periods as a system-clock period (<code>kFullCycle = 8</code>). The CDCM-8 example in Usage uses a fast-clock frequency four times the system-clock frequency.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Representation and interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>roundTripTime</code></td>
+<td>Unsigned 16-bit count of system clocks, measured by the secondary; zero in primary mode.</td>
+</tr>
+<tr>
+<td><code>hbcOffset</code></td>
+<td>Unsigned 16-bit heartbeat-counter initialization offset. The Heartbeat Unit loads this value plus one when accepting a synchronization pulse.</td>
+</tr>
+<tr>
+<td><code>fineOffsetLocal</code></td>
+<td>Signed 16-bit correction for the local link, including the odd-round-trip adjustment and local normalization. Defined by the secondary calculation.</td>
+</tr>
+<tr>
+<td><code>fineOffset</code></td>
+<td>Signed 16-bit correction after upstream accumulation and normalization. Zero in primary mode.</td>
+</tr>
+<tr>
+<td><code>upstreamOffset</code></td>
+<td>Signed 16-bit correction supplied by the integrating design for propagation to the downstream secondary. Zero at the root.</td>
+</tr>
+<tr>
+<td><code>calibDelay</code></td>
+<td>Signed 12-bit local calibration parameter, in the same fine-time units. Exchanged with the partner.</td>
+</tr>
+</tbody>
+</table>
+<p>In secondary mode, use the offsets when <code>validOffset = '1'</code>. In primary mode, <code>validOffset</code> indicates reception of the secondary's completion information, and <code>hbcOffset</code> contains the offset reported by that secondary. <code>fineOffsetLocal</code> is not assigned by the primary generate branch; do not use it in primary mode.</p>
+<p>Apply the signed fine correction to the local measurement timestamp in the acquisition data path. A positive correction increases the timestamp, and a negative correction decreases it. Preserve the sign and handle carry or borrow across clock and heartbeat-frame boundaries.</p>
+<h3 id="receiver-parameters-and-calibration">Receiver parameters and calibration</h3>
+<p>The 7-series calculation uses the IDELAY tap count and signed SerDes latency. Its tap coefficient is 80 fine-time counts, equivalent to 78.125 ps. The UltraScale calculation additionally uses the initial master and slave IDELAY counter values. The current calculation identifies a 7-series receiver by a zero initial master counter value and an UltraScale receiver by a nonzero value.</p>
+<p>With <code>enCalibDelay = true</code>, <code>CalcCalibDelay</code> adds both the local-minus-partner calibration parameter and a family-dependent digital-delay difference before the receiver-delay difference is divided by two. With <code>false</code>, this entire additional correction is zero. The generic defaults to <code>false</code> in <code>LaccpMainBlock</code>, even though the Verilog module has its own default.</p>
+<p>Calibration values depend on the implementation. The RTL does not supply a universal set of board-specific values or a procedure to measure them. The <a href="../../#references">reference papers</a> discuss the underlying delay components.</p>
+<h3 id="rcap-local-addresses">RCAP local addresses</h3>
+<table>
+<thead>
+<tr>
+<th>Local address</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x0</code></td>
+<td>Completion message carrying the secondary counter offset.</td>
+</tr>
+<tr>
+<td><code>0x1</code></td>
+<td>Exchange IDELAY tap count, SerDes latency, and upstream fine offset.</td>
+</tr>
+<tr>
+<td><code>0x2</code></td>
+<td>Exchange initial IDELAY counter values and calibration parameter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rligp">RLIGP</h2>
+<p>RLIGP stands for Remote Link Information Getter Protocol. It exchanges a 32-bit application-supplied value with the other endpoint. LACCP does not define an IP address format or assign a system-wide identity through this interface.</p>
+<p>When <code>validMyLink</code> is asserted, RLIGP captures <code>addrMyLink</code> and sends it as a write with a reply request to local address <code>0x0</code> of the partner's RLIGP endpoint. It retries while waiting for a reply and stops after receiving the reply. To exchange a changed local value after completion, restart the protocol through reset.</p>
+<p>Reception of the partner's write sets <code>addrPartnerLink</code> and <code>validPartnerLink</code>; reset clears the validity. This operation is independent of RCAP completion. <code>isReadyForDaq</code> does not include a check of <code>validPartnerLink</code>.</p>
+<h2 id="heartbeat-units">Heartbeat Units</h2>
+<p><code>defHeartBeatUnit.vhd</code> defines a 16-bit heartbeat counter and a 24-bit heartbeat-frame number. At 125 MHz, one frame lasts 524.288 microseconds, and the combined 40-bit coarse timestamp wraps after approximately 2.44 hours. These durations scale with the system-clock period.</p>
+<p><code>PrimaryHeartBeatUnit</code> increments the frame number at heartbeats. Halfway through a heartbeat frame, it samples the acquisition gate and flags and schedules the frame-information message. <code>forceOn</code> forces the local frame state active. <code>primaryRst</code> resets its counter and frame number and schedules a reset message only while the frame state is idle.</p>
+<p>The counter, heartbeat strobe, and frame number are registered in separate processes. During a normal rollover, <code>heartbeatOut</code> is high with <code>heartbeatCount = 0</code>, and the frame number increments on the following clock, when the counter is 1. Account for this pipeline when assembling a measurement timestamp from the separate outputs. Reset, initial frame acquisition, and frame-number correction are separate cases.</p>
+<p>In synchronized mode, <code>HeartBeatUnit</code> first loads its counter from <code>hbcOffsetIn + 1</code> when both <code>validOffsetIn</code> and <code>syncPulseIn</code> are high. It then accepts valid global frame information and asserts <code>isSynchronized</code>. Subsequent messages update frame state and flags and compare the global frame number with the local one. <code>hbfNumMismatch</code> reports a mismatch; <code>keepLocalHbfNum = '0'</code> permits correction of the local frame number.</p>
+<p>With <code>enStandAlone = '1'</code>, <code>HeartBeatUnit</code> generates its local frame number and uses its local acquisition controls. This mode does not establish synchronization to another node; <code>isSynchronized</code> is not a stand-alone readiness indication.</p>
+<p>Frame-information messages use local address <code>0x0</code> of the HBU endpoint. The register value contains frame state in bits 31:28, zeros in 27:26, flags in 25:24, and frame number in 23:0. The idle-only primary reset uses a broadcast write with local address <code>0xF</code>.</p>
+<h2 id="laccpmainblock">LaccpMainBlock</h2>
+<h3 id="generics">Generics</h3>
+<table>
+<thead>
+<tr>
+<th>Generic</th>
+<th>Type / default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kPrimaryMode</code></td>
+<td><code>boolean</code>, <code>false</code></td>
+<td>Select primary (<code>true</code>) or secondary (<code>false</code>) RCAP behavior for this link.</td>
+</tr>
+<tr>
+<td><code>kNumInterconnect</code></td>
+<td><code>integer</code>, <code>16</code></td>
+<td>Number of implemented interconnects; use 0–32 to fit the fixed external arrays.</td>
+</tr>
+<tr>
+<td><code>kFastClkFreq</code></td>
+<td><code>real</code>, <code>500.0</code></td>
+<td>SerDes fast-clock frequency in MHz, used by timing calculations.</td>
+</tr>
+<tr>
+<td><code>enDebug</code></td>
+<td><code>boolean</code>, <code>false</code></td>
+<td>Enable the debug attributes controlled by this generic.</td>
+</tr>
+<tr>
+<td><code>enCalibDelay</code></td>
+<td><code>boolean</code>, <code>false</code></td>
+<td>Enable the additional calibration calculation in the secondary.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="system-user-pulses-and-rligp-ports">System, user pulses, and RLIGP ports</h3>
+<p><code>SL</code> below means <code>std_logic</code>; <code>SLV</code>, <code>U</code>, and <code>S</code> mean <code>std_logic_vector</code>, <code>unsigned</code>, and <code>signed</code>. Widths are the current package values.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Direction / type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rst</code></td>
+<td>In, SL</td>
+<td>Active-high reset request; sampled by the internal reset shift register.</td>
+</tr>
+<tr>
+<td><code>clk</code></td>
+<td>In, SL</td>
+<td>Protocol clock; use the associated MIKUMARI parallel-clock domain.</td>
+</tr>
+<tr>
+<td><code>isReadyForDaq</code></td>
+<td>Out, SL</td>
+<td>RCAP completion for this endpoint.</td>
+</tr>
+<tr>
+<td><code>laccpPulsesIn</code></td>
+<td>In, SLV(8)</td>
+<td>One-clock user-pulse requests; assert at most one bit at a time after synchronization.</td>
+</tr>
+<tr>
+<td><code>laccpPulsesOut</code></td>
+<td>Out, SLV(8)</td>
+<td>Decoded received user pulses, suppressed while RCAP owns the pulse path.</td>
+</tr>
+<tr>
+<td><code>pulseInRejected</code></td>
+<td>Out, SL</td>
+<td>Indicates an input collision or multiple-bit pulse encoding; see operational behavior below.</td>
+</tr>
+<tr>
+<td><code>addrMyLink</code></td>
+<td>In, SLV(32)</td>
+<td>Application-supplied local link information.</td>
+</tr>
+<tr>
+<td><code>validMyLink</code></td>
+<td>In, SL</td>
+<td>Permit RLIGP to capture and send the local information.</td>
+</tr>
+<tr>
+<td><code>addrPartnerLink</code></td>
+<td>Out, SLV(32)</td>
+<td>Received partner information.</td>
+</tr>
+<tr>
+<td><code>validPartnerLink</code></td>
+<td>Out, SL</td>
+<td>Qualify <code>addrPartnerLink</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timing-and-synchronization-ports">Timing and synchronization ports</h3>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Direction / type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idelayTapIn</code></td>
+<td>In, U(5)</td>
+<td>Local MIKUMARI receiver tap count.</td>
+</tr>
+<tr>
+<td><code>serdesLantencyIn</code></td>
+<td>In, S(4)</td>
+<td>Local SerDes latency in half-fast-clock periods.</td>
+</tr>
+<tr>
+<td><code>cntValueInitIn</code></td>
+<td>In, SLV(9)</td>
+<td>Local initial master IDELAY counter value.</td>
+</tr>
+<tr>
+<td><code>cntValueSlaveInitIn</code></td>
+<td>In, SLV(9)</td>
+<td>Local initial slave IDELAY counter value.</td>
+</tr>
+<tr>
+<td><code>idelayTapOut</code></td>
+<td>Out, U(5)</td>
+<td>Partner tap count received through RCAP.</td>
+</tr>
+<tr>
+<td><code>serdesLantencyOut</code></td>
+<td>Out, S(4)</td>
+<td>Partner SerDes latency received through RCAP.</td>
+</tr>
+<tr>
+<td><code>cntValueInitOut</code></td>
+<td>Out, U(9)</td>
+<td>Partner initial master counter value.</td>
+</tr>
+<tr>
+<td><code>cntValueSlaveInitOut</code></td>
+<td>Out, U(9)</td>
+<td>Partner initial slave counter value.</td>
+</tr>
+<tr>
+<td><code>roundTripTime</code></td>
+<td>Out, SLV(16)</td>
+<td>Secondary round-trip measurement; zero in primary mode.</td>
+</tr>
+<tr>
+<td><code>calibDelay</code></td>
+<td>In, S(12)</td>
+<td>Local calibration parameter.</td>
+</tr>
+<tr>
+<td><code>calibDelayOut</code></td>
+<td>Out, S(12)</td>
+<td>Partner calibration parameter.</td>
+</tr>
+<tr>
+<td><code>hbuIsSyncedIn</code></td>
+<td>In, SL</td>
+<td>Secondary Heartbeat Unit synchronization feedback to RCAP.</td>
+</tr>
+<tr>
+<td><code>syncPulseIn</code></td>
+<td>In, SL</td>
+<td>Heartbeat source for the synchronization transmit path.</td>
+</tr>
+<tr>
+<td><code>syncPulseOut</code></td>
+<td>Out, SL</td>
+<td>Received heartbeat routed to the secondary HBU during synchronization.</td>
+</tr>
+<tr>
+<td><code>upstreamOffset</code></td>
+<td>In, S(16)</td>
+<td>Upstream accumulated correction to advertise to the downstream secondary.</td>
+</tr>
+<tr>
+<td><code>validOffset</code></td>
+<td>Out, SL</td>
+<td>Qualify secondary offsets, or indicate partner completion in primary mode.</td>
+</tr>
+<tr>
+<td><code>hbcOffset</code></td>
+<td>Out, SLV(16)</td>
+<td>Secondary counter offset, or the partner-reported offset in primary mode.</td>
+</tr>
+<tr>
+<td><code>fineOffset</code></td>
+<td>Out, S(16)</td>
+<td>Accumulated secondary fine correction; zero in primary mode.</td>
+</tr>
+<tr>
+<td><code>fineOffsetLocal</code></td>
+<td>Out, S(16)</td>
+<td>Local secondary correction; unused in primary mode.</td>
+</tr>
+</tbody>
+</table>
+<p>Partner timing outputs are diagnostic copies of values received during the exchange, not local IDELAY control outputs. They have no separate output-valid port. Observe them after a completed exchange, rather than assuming they are valid at reset release.</p>
+<h3 id="laccp-bus-ports">LACCP Bus ports</h3>
+<p>Directions are relative to <code>LaccpMainBlock</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Direction / type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isReadyIntraIn</code></td>
+<td>In, SLV(1)</td>
+<td>External intra endpoint ready to receive forwarded bodies.</td>
+</tr>
+<tr>
+<td><code>dataIntraIn</code></td>
+<td>In, <code>ExtIntraType</code></td>
+<td>One 64-bit body from the external intra endpoint.</td>
+</tr>
+<tr>
+<td><code>validIntraIn</code></td>
+<td>In, SLV(1)</td>
+<td>Enqueue the corresponding input body.</td>
+</tr>
+<tr>
+<td><code>dataIntraOut</code></td>
+<td>Out, <code>ExtIntraType</code></td>
+<td>Body forwarded to the external intra endpoint.</td>
+</tr>
+<tr>
+<td><code>validIntraOut</code></td>
+<td>Out, SLV(1)</td>
+<td>Qualify the forwarded body.</td>
+</tr>
+<tr>
+<td><code>isReadyInterIn</code></td>
+<td>In, SLV(32)</td>
+<td>Readiness of interconnect destinations.</td>
+</tr>
+<tr>
+<td><code>existInterOut</code></td>
+<td>Out, SLV(32)</td>
+<td>High for each configured interconnect; other elements are undriven.</td>
+</tr>
+<tr>
+<td><code>dataInterIn</code></td>
+<td>In, <code>ExtInterType</code></td>
+<td>Array of 32 input frame bodies.</td>
+</tr>
+<tr>
+<td><code>validInterIn</code></td>
+<td>In, SLV(32)</td>
+<td>Input-valid indications for interconnect bodies.</td>
+</tr>
+<tr>
+<td><code>dataInterOut</code></td>
+<td>Out, <code>ExtInterType</code></td>
+<td>Forwarded bodies on configured interconnects.</td>
+</tr>
+<tr>
+<td><code>validInterOut</code></td>
+<td>Out, SLV(32)</td>
+<td>Output-valid indications on configured interconnects.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mikumari-ports">MIKUMARI ports</h3>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Direction / type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mikuLinkUpIn</code></td>
+<td>In, SL</td>
+<td>MIKUMARI link status; low requests an internal LACCP reset.</td>
+</tr>
+<tr>
+<td><code>dataTx</code></td>
+<td>Out, <code>CbtUDataType</code> (8 bits)</td>
+<td>Transmit byte.</td>
+</tr>
+<tr>
+<td><code>validTx</code></td>
+<td>Out, SL</td>
+<td>Transmit byte valid.</td>
+</tr>
+<tr>
+<td><code>frameLastTx</code></td>
+<td>Out, SL</td>
+<td>Final byte of the transmitted LACCP frame.</td>
+</tr>
+<tr>
+<td><code>txAck</code></td>
+<td>In, SL</td>
+<td>MIKUMARI acknowledgment of the transmit byte.</td>
+</tr>
+<tr>
+<td><code>pulseTx</code></td>
+<td>Out, SL</td>
+<td>Pulse transmit request.</td>
+</tr>
+<tr>
+<td><code>pulseTypeTx</code></td>
+<td>Out, <code>MikumariPulseType</code> (3 bits)</td>
+<td>Encoded pulse index.</td>
+</tr>
+<tr>
+<td><code>busyPulseTx</code></td>
+<td>In, SL</td>
+<td>MIKUMARI pulse transmitter busy.</td>
+</tr>
+<tr>
+<td><code>dataRx</code></td>
+<td>In, <code>CbtUDataType</code> (8 bits)</td>
+<td>Received byte.</td>
+</tr>
+<tr>
+<td><code>validRx</code></td>
+<td>In, SL</td>
+<td>Received byte valid.</td>
+</tr>
+<tr>
+<td><code>frameLastRx</code></td>
+<td>In, SL</td>
+<td>Received frame's final-byte indication.</td>
+</tr>
+<tr>
+<td><code>checkSumErrRx</code></td>
+<td>In, SL</td>
+<td>Received checksum-error indication.</td>
+</tr>
+<tr>
+<td><code>frameBrokenRx</code></td>
+<td>In, SL</td>
+<td>Frame-start error indication, currently buffered but not acted on by the parser.</td>
+</tr>
+<tr>
+<td><code>recvTermndRx</code></td>
+<td>In, SL</td>
+<td>Receive-termination indication, currently buffered but not acted on by the parser.</td>
+</tr>
+<tr>
+<td><code>pulseRx</code></td>
+<td>In, SL</td>
+<td>Received pulse strobe.</td>
+</tr>
+<tr>
+<td><code>pulseTypeRx</code></td>
+<td>In, <code>MikumariPulseType</code> (3 bits)</td>
+<td>Received pulse index.</td>
+</tr>
+</tbody>
+</table>
+<p>The normal-frame transmit path uses <code>txAck</code> to advance through bytes. Connect this interface directly to MIKUMARI; do not replace the acknowledgment with an assumed byte rate.</p>
+<h2 id="heartbeat-unit-interfaces">Heartbeat Unit interfaces</h2>
+<p>Both entities have <code>enDebug : boolean := false</code>. The common ports are listed below; names and directions are relative to the Heartbeat Unit.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Direction / type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rst</code></td>
+<td>In, SL</td>
+<td>Active-high reset request, sampled by a 16-stage shift register.</td>
+</tr>
+<tr>
+<td><code>clk</code></td>
+<td>In, SL</td>
+<td>Heartbeat and LACCP Bus clock.</td>
+</tr>
+<tr>
+<td><code>heartbeatOut</code></td>
+<td>Out, SL</td>
+<td>Local heartbeat associated with counter rollover.</td>
+</tr>
+<tr>
+<td><code>heartbeatCount</code></td>
+<td>Out, SLV(16)</td>
+<td>Local counter value.</td>
+</tr>
+<tr>
+<td><code>hbfNumber</code></td>
+<td>Out, SLV(24)</td>
+<td>Local heartbeat-frame number.</td>
+</tr>
+<tr>
+<td><code>clkDiv16</code></td>
+<td>Out, SL</td>
+<td>Divide-by-16 output, realigned at heartbeat timing.</td>
+</tr>
+<tr>
+<td><code>hbfCtrlGateIn</code></td>
+<td>In, SL</td>
+<td>Acquisition gate sampled at half-frame timing; local control in primary or stand-alone mode.</td>
+</tr>
+<tr>
+<td><code>forceOn</code></td>
+<td>In, SL</td>
+<td>Force active frame state in primary or stand-alone mode.</td>
+</tr>
+<tr>
+<td><code>frameState</code></td>
+<td>Out, <code>HbfStateType</code></td>
+<td><code>kActiveFrame</code> or <code>kIdleFrame</code>.</td>
+</tr>
+<tr>
+<td><code>hbfFlagsIn</code></td>
+<td>In, SLV(2)</td>
+<td>Local flags sampled in primary or stand-alone mode.</td>
+</tr>
+<tr>
+<td><code>frameFlags</code></td>
+<td>Out, SLV(2)</td>
+<td>Flags associated with the local frame state.</td>
+</tr>
+<tr>
+<td><code>dataBusIn</code></td>
+<td>In, <code>LaccpFrameBobyType</code></td>
+<td>Forwarded frame body from the main block.</td>
+</tr>
+<tr>
+<td><code>validBusIn</code></td>
+<td>In, SL</td>
+<td>Qualify the input body.</td>
+</tr>
+<tr>
+<td><code>dataBusOut</code></td>
+<td>Out, <code>LaccpFrameBobyType</code></td>
+<td>Locally generated body; tied to zero in <code>HeartBeatUnit</code>.</td>
+</tr>
+<tr>
+<td><code>validBusOut</code></td>
+<td>Out, SL</td>
+<td>Qualify an outgoing body; tied low in <code>HeartBeatUnit</code>.</td>
+</tr>
+<tr>
+<td><code>isReadyOut</code></td>
+<td>Out, SL</td>
+<td>Bus receive readiness; tied high in both entities.</td>
+</tr>
+</tbody>
+</table>
+<p><code>PrimaryHeartBeatUnit</code> has one additional port:</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Direction / type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>primaryRst</code></td>
+<td>In, SL</td>
+<td>Synchronous request to reset the time counters and send a reset message while idle.</td>
+</tr>
+</tbody>
+</table>
+<p><code>HeartBeatUnit</code> has the following additional ports:</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Direction / type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enStandAlone</code></td>
+<td>In, SL</td>
+<td>Select independent local operation instead of synchronized frame operation.</td>
+</tr>
+<tr>
+<td><code>keepLocalHbfNum</code></td>
+<td>In, SL</td>
+<td>Preserve the local frame number on subsequent mismatches when high.</td>
+</tr>
+<tr>
+<td><code>syncPulseIn</code></td>
+<td>In, SL</td>
+<td>Received synchronization heartbeat.</td>
+</tr>
+<tr>
+<td><code>hbcOffsetIn</code></td>
+<td>In, SLV(16)</td>
+<td>Counter offset to load on synchronization.</td>
+</tr>
+<tr>
+<td><code>validOffsetIn</code></td>
+<td>In, SL</td>
+<td>Qualify the counter offset.</td>
+</tr>
+<tr>
+<td><code>isSynchronized</code></td>
+<td>Out, SL</td>
+<td>Counter and global frame information have been acquired in synchronized mode.</td>
+</tr>
+<tr>
+<td><code>hbfNumMismatch</code></td>
+<td>Out, SL</td>
+<td>Most recently compared global and local frame numbers differ.</td>
+</tr>
+</tbody>
+</table>
+<p><code>PrimaryHeartBeatUnit</code> does not process <code>dataBusIn</code> or <code>validBusIn</code>. In synchronized <code>HeartBeatUnit</code> operation, frame state and flags come from upstream messages rather than the local acquisition-control inputs.</p>
+<h2 id="operational-behavior">Operational behavior</h2>
+<h3 id="reset-and-link-loss">Reset and link loss</h3>
+<p>The main block samples <code>rst OR NOT mikuLinkUpIn</code> through a 16-stage shift register. The Heartbeat Units similarly sample their own <code>rst</code>, but have no link-status input. Keep their clocks running and provide reset requests long enough to pass through the shift registers.</p>
+<p>Link loss resets the main block's frame, bus, RCAP, and RLIGP logic after the shift-register delay. It does not directly reset the external Heartbeat Unit or qualify all user-pulse outputs. The integrating design must reset the secondary Heartbeat Unit for reacquisition and gate application use of timestamps and pulses with current link and readiness status.</p>
+<p>RCAP releases its pulse takeover after completion. It does not continuously realign the heartbeat counter or recalculate the fine offset after completion; restart synchronization after a change requiring a new timing solution.</p>
+<h3 id="user-pulses">User pulses</h3>
+<p>During synchronization, RCAP owns the pulse path. Received heartbeat and probe pulses are used internally, and <code>laccpPulsesOut</code> is zero. After completion, an index from 0 to 7 is converted between a one-hot LACCP vector and a MIKUMARI pulse type.</p>
+<table>
+<thead>
+<tr>
+<th>Downstream pulse index</th>
+<th>Package definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>kDownPulseTrigger</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>kDownPulseCntRst</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>kDownPulseSysRst</code></td>
+</tr>
+<tr>
+<td>3–7</td>
+<td>Reserved definitions</td>
+</tr>
+</tbody>
+</table>
+<p>All upstream user-pulse indices are reserved in the current package. These names label pulse indications; they do not reset application logic automatically.</p>
+<p>Use one-clock, one-hot requests only when the link and LACCP are ready. A request arriving while the MIKUMARI transmitter is busy or the main block already has a pulse registered sets <code>pulseInRejected</code>. Multiple active input bits also cause a rejection indication, but the current encoder still registers a pulse type; do not depend on the flag to suppress malformed requests. There is no user-pulse queue or automatic retry in this interface.</p>
+<h3 id="source-map">Source map</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Reference content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>laccp/LaccpMainBlock.vhd</code></td>
+<td>Top-level ports, pulse handling, external bus mapping, reset.</td>
+</tr>
+<tr>
+<td><code>laccp/defLaccp.vhd</code></td>
+<td>Frame layout, bus types, addresses, pulse indices, fine-time scale.</td>
+</tr>
+<tr>
+<td><code>laccp/RCAP.vhd</code>, <code>CalcFineLantency_US.v</code>, <code>CalcCalibDelay.v</code></td>
+<td>Offset calculation, calibration, synchronization completion.</td>
+</tr>
+<tr>
+<td><code>laccp/RLIGP.vhd</code></td>
+<td>Link-information exchange.</td>
+</tr>
+<tr>
+<td><code>laccp/PrimaryHeartBeatUnit.vhd</code>, <code>HeartBeatUnit.vhd</code>, <code>defHeartBeatUnit.vhd</code></td>
+<td>Heartbeat and frame behavior and interfaces.</td>
+</tr>
+<tr>
+<td><code>laccp/LaccpBusSwitch.vhd</code>, <code>LaccpFrameTx.vhd</code>, <code>LaccpFrameRx.vhd</code></td>
+<td>Frame forwarding and transport.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
